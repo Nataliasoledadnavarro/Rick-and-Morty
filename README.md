@@ -7,9 +7,9 @@
 ## Podrás:
 <ul>
 
-<li>• Ver todos los personajes.</li>
-<li>• Buscar un personaje en particular. </li>
-<li>• Próximamente: 
+<li> Ver todos los personajes.</li>
+<li> Buscar un personaje en particular. </li>
+<li> Próximamente: 
                 <ul>
                     <li>Vista de detalles</li>
                     <li>Enrutamiento</li></ul>
