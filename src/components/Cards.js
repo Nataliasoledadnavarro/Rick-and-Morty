@@ -5,15 +5,15 @@ import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 
 const Cards = ({ data }) => {
-    const cards = data.map((personaje) => {
+    
         return (
-            <Box sx={{ width: 300, ml: 6, mt: 6 }}>
-                <Card>
+           data.map(personaje => 
+                <Card sx={{ width: 250, height: 320, mt:3 }} >
                     <CardMedia
                         component="img"
-                        height="180"
+                        height="160"
                         image={personaje.image}
-                        alt="Caricatura del personaje"
+                        alt={personaje.name}
                     />
                     <CardContent>
                         <Typography variant="h5">
@@ -27,12 +27,9 @@ const Cards = ({ data }) => {
                         </Typography>
                     </CardContent>
                 </Card>
-            </Box>)
-    })
-    console.log(cards)
-    return (
-        cards
-    )
+            )
+        )
+    
 
 }
 

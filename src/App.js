@@ -1,9 +1,10 @@
 import Cards from "./components/Cards";
 import { useState, useEffect } from "react";
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Nav from "./components/Nav";
+import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 
 
@@ -35,22 +36,18 @@ const App = () => {
     e.preventDefault();
     setBusqueda(valorDelInput);
   };
-
   
   return (
     <Box>
-      <Box
-        component="form"
-        onClick={handleClick}
-        sx={{ display: "flex", justifyContent: "center"}}>
-        <TextField id="standard-basic" label="Buscar personaje" variant="standard" margin="normal" sx={{ width: 400 }} onChange={handleChange} />
-        <Stack   sx={{ display: "flex", justifyContent: "center" }}>
-          <Button variant="contained"  >{loading ? "Buscando" : "Buscar"}</Button>
-        </Stack>
-      </Box>
-      <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+      <Nav/>
+      <Form handleChange={handleChange}
+      handleClick={handleClick}
+      loading={loading}
+      />
+      <Container sx={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around", mt:4}}>
         <Cards data={personajes} />
-      </Box>
+      </Container>
+      <Footer/>
     </Box>
   )
 }
