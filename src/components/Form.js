@@ -19,7 +19,9 @@ const Form = ({ handleSubmit, handleChange, loading }) => {
         onChange={handleChange}
       />
       <Stack sx={{ display: "flex", justifyContent: "center" }}>
-        <Button   onClick={handleSubmit} variant="contained">{loading ? "Buscando" : "Buscar"}</Button>
+        <Button onClick={handleSubmit} variant="contained">
+          {loading ? "Buscando" : "Buscar"}
+        </Button>
       </Stack>
     </Box>
   );
