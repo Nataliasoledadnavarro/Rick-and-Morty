@@ -3,11 +3,11 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 
-const Form = ({ handleClick, handleChange, loading }) => {
+const Form = ({ handleSubmit, handleChange, loading }) => {
   return (
     <Box
       component="form"
-      onClick={handleClick}
+      onSubmit={handleSubmit}
       sx={{ display: "flex", justifyContent: "center" }}
     >
       <TextField
@@ -19,7 +19,7 @@ const Form = ({ handleClick, handleChange, loading }) => {
         onChange={handleChange}
       />
       <Stack sx={{ display: "flex", justifyContent: "center" }}>
-        <Button variant="contained">{loading ? "Buscando" : "Buscar"}</Button>
+        <Button   onClick={handleSubmit} variant="contained">{loading ? "Buscando" : "Buscar"}</Button>
       </Stack>
     </Box>
   );

@@ -65,7 +65,7 @@ const ResponsiveAppBar = () => {
                             }}
                         >
                             {links.map((link) => (
-                                <Link to={link === "personajes" ? "/" : {link}}>
+                                <Link to={link === "personajes" ? "/" : link}>
                                 <MenuItem key={link} onClick={handleCloseNavMenu} >
                                     <Typography textAlign="center">{link}</Typography>
                                 </MenuItem>
@@ -76,7 +76,8 @@ const ResponsiveAppBar = () => {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:"flex-end" } }}>
                         {links.map((link) => (
-                            <Link to={link === "personajes" ? "/" : {link}}>
+                            <Link to={link === "personajes" ? "/" : link}>
+                               
                             <Button
                                 key={link}
                                 onClick={handleCloseNavMenu}
