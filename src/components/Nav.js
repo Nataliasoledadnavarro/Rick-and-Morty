@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -11,7 +12,8 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import logo from "../logo.png";
 
-const links = ['Personajes', 'Episodios', 'Ubicaciones'];
+
+const links = ['personajes', 'episodios', 'ubicaciones'];
 
 const ResponsiveAppBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -61,19 +63,20 @@ const ResponsiveAppBar = () => {
                             sx={{
                                 display: { xs: 'block', md: 'none'}
                             }}
-                            
-
                         >
                             {links.map((link) => (
+                                <Link to={link === "personajes" ? "/" : {link}}>
                                 <MenuItem key={link} onClick={handleCloseNavMenu} >
                                     <Typography textAlign="center">{link}</Typography>
                                 </MenuItem>
+                                </Link>
                             ))}
                         </Menu>
                     </Box>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:"flex-end" } }}>
                         {links.map((link) => (
+                            <Link to={link === "personajes" ? "/" : {link}}>
                             <Button
                                 key={link}
                                 onClick={handleCloseNavMenu}
@@ -81,6 +84,7 @@ const ResponsiveAppBar = () => {
                             >
                                 {link}
                             </Button>
+                            </Link>
                         ))}
                     </Box>
                 </Toolbar>

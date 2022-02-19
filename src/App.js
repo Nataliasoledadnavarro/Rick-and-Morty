@@ -1,16 +1,14 @@
-import Cards from "./components/Cards";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState, useEffect } from "react";
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import Personajes from "./components/Personajes";
+import Episodios from "./components/Episodios";
+import Ubicaciones from "./components/Ubicaciones";
 import Nav from "./components/Nav";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 
-
-
 const App = () => {
-
-  const [personajes, setPersonajes] = useState([])
+  const [personajes, setPersonajes] = useState([]);
   const [valorDelInput, setValorDelInput] = useState("");
   const [busqueda, setBusqueda] = useState("");
   const [loading, setLoading] = useState(false);
@@ -20,36 +18,40 @@ const App = () => {
     fetch(`https://rickandmortyapi.com/api/character/?name=${busqueda}`)
       .then((res) => res.json())
       .then((data) => {
-        setPersonajes(data.results)
+        setPersonajes(data.results);
         setLoading(false);
       });
   }, [busqueda]);
 
-
   const handleChange = (e) => {
-    {valorDelInput === "" && setBusqueda("")}
+    {
+      valorDelInput === "" && setBusqueda("");
+    }
     setValorDelInput(e.target.value);
-    
   };
 
   const handleClick = (e) => {
     e.preventDefault();
     setBusqueda(valorDelInput);
   };
-  
+
   return (
-    <Box>
-      <Nav/>
-      <Form handleChange={handleChange}
-      handleClick={handleClick}
-      loading={loading}
+    <BrowserRouter>
+      <Nav />
+      <Form
+        handleChange={handleChange}
+        handleClick={handleClick}
+        loading={loading}
       />
-      <Container sx={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around", mt:4}}>
-        <Cards data={personajes} />
-      </Container>
-      <Footer/>
-    </Box>
-  )
-}
+      <Routes>
+          <Route path="/" element={<Personajes />}/>
+          <Route path="/episodios" element={<Episodios />} />
+          <Route path="/ubicaciones" element={<Ubicaciones />}/>
+      </Routes>
+      <Personajes personajes={personajes} />
+      <Footer />
+    </BrowserRouter>
+  );
+};
 
 export default App;

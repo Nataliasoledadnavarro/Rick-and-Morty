@@ -1,14 +1,12 @@
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 
 const Cards = ({ data }) => {
-    
         return (
            data.map(personaje => 
-                <Card sx={{ width: 250, height: 320, mt:3 }} >
+                <Card sx={{ width: 250, height: 320, mt:3 }} key={personaje.id} >
                     <CardMedia
                         component="img"
                         height="160"
