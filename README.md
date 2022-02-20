@@ -6,15 +6,11 @@
 
 ## Podrás:
 <ul>
-
-<li> Ver todos los personajes.</li>
-<li> Buscar un personaje en particular. </li>
-<li> Próximamente: 
-                <ul>
-                    <li>Vista de detalles</li>
-                    <li>Enrutamiento</li></ul>
-                </ul>
-                </li>
+    <li> Ver todos los personajes.</li>
+    <li> Buscar un personaje en particular. </li>
+    <li>Vista de detalles</li>
+    <li>Episodios</li>
+    <li>Ubicación</li>
 </ul>
 
 
@@ -24,6 +20,7 @@
     <li>Props</li>
     <li>Elevación de estado</li>
     <li>Renderizado condicional</li>
+    <li>Enrutamiento</li>
     <li>useState</li>
     <li>useEffect</li>
     <li>MATERIAL-UI</li>

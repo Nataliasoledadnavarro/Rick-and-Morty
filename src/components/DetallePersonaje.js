@@ -18,7 +18,6 @@ const DetallePersonaje = () => {
       .then((data) => setPersonaje(data));
   }, []);
 
-  console.log(personaje);
   return (
     <Container sx={{ display: "flex", justifyContent: "center", mt: 12 }}>
       <Card sx={{ display: "flex", width: 500 }}>
@@ -33,10 +32,13 @@ const DetallePersonaje = () => {
             {personaje.name}
           </Typography>
           <Typography variant="subtitle1" color="text.secondary" component="p">
-            Status: {personaje.status}
+            Estado: {personaje.status}
           </Typography>
           <Typography variant="subtitle1" color="text.secondary" component="p">
-            species: {personaje.species}
+            Especie: {personaje.species}
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary" component="p">
+            Género: {personaje.gender}
           </Typography>
         </CardContent>
       </Card>

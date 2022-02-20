@@ -2,3 +2,7 @@ body{
     margin:0;
     background-color: rgba(83, 84, 85, 0.205)
 }
+
+a{
+    text-decoration: none;
+}
