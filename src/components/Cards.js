@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Cards = ({ data }) => {
   return data.map((personaje) => (
-    <Link to={`/${personaje.id}`}>
+    <Link to={`/personajes/${personaje.id}`}>
       <Card sx={{ width: 250, height: 280, mt: 3 }} key={personaje.id}>
         <CardMedia
           component="img"

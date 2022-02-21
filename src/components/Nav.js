@@ -30,7 +30,7 @@ const ResponsiveAppBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box>
-            <img width="150px" src={logo}></img>
+            <img width="150px" src={logo} alt="Rick and Morty"></img>
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none"}, justifyContent: "flex-end"}}>

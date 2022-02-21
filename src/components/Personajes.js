@@ -21,9 +21,6 @@ const Personajes = () => {
   }, [busqueda]);
 
   const handleChange = (e) => {
-    {
-      valorDelInput === "" && setBusqueda("");
-    }
     setValorDelInput(e.target.value);
   };
 
