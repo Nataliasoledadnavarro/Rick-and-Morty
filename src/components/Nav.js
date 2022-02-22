@@ -33,7 +33,13 @@ const ResponsiveAppBar = () => {
             <img width="150px" src={logo} alt="Rick and Morty"></img>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none"}, justifyContent: "flex-end"}}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "flex-end",
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -64,7 +70,10 @@ const ResponsiveAppBar = () => {
             >
               {links.map((link) => (
                 <Link to={link === "personajes" ? "/" : link}>
-                  <MenuItem key={`${link}-responsive`} onClick={handleCloseNavMenu}>
+                  <MenuItem
+                    key={`${link}-responsive`}
+                    onClick={handleCloseNavMenu}
+                  >
                     <Typography textAlign="center">{link}</Typography>
                   </MenuItem>
                 </Link>
