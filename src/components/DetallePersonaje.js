@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 const DetallePersonaje = () => {
   const params = useParams();
@@ -19,6 +20,7 @@ const DetallePersonaje = () => {
   }, [params.idPersonaje]);
 
   return (
+    <Box sx={{height:"100vh"}}>
     <Container sx={{ display: "flex", justifyContent: "center", mt: 12 }}>
       <Card sx={{ display: "flex", width: 500 }}>
         <CardMedia
@@ -43,6 +45,7 @@ const DetallePersonaje = () => {
         </CardContent>
       </Card>
     </Container>
+    </Box>
   );
 };
 
