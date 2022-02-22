@@ -18,8 +18,16 @@ const Personajes = () => {
   };
 
   const handlePaginaAnterior = () => {
-    setPaginaActual(paginaActual - 1);
+    setPaginaActual(paginaActual - 1)
   };
+
+  const handleUltimaPagina = () => {
+    setPaginaActual(cantidadPaginas)
+  };
+
+  const handlePrimeraPagina = () =>{
+    setPaginaActual(1)
+  }
 
   useEffect(() => {
     setLoading(true);
@@ -30,10 +38,10 @@ const Personajes = () => {
       .then((res) => res.json())
       .then((data) => {
         setPersonajes(data.results);
-        setCantidadPaginas(data.pages);
+        setCantidadPaginas(data.info.pages);
         setLoading(false);
       });
-  }, [busqueda, paginaActual]);
+  }, [busqueda, paginaActual,cantidadPaginas]);
 
   const handleChange = (e) => {
     setValorDelInput(e.target.value);
@@ -63,6 +71,8 @@ const Personajes = () => {
       <Paginado
         proximaPagina={handleProximaPagina}
         paginaAnterior={handlePaginaAnterior}
+        ultimaPagina = {handleUltimaPagina}
+        primeraPagina = {handlePrimeraPagina}
         paginaActual={paginaActual}
         cantidadPaginas={cantidadPaginas}
       />

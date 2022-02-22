@@ -29,6 +29,14 @@ const Ubicacion = () => {
     setPaginaActual(paginaActual - 1);
   };
 
+  const handleUltimaPagina = () => {
+    setPaginaActual(cantidadPaginas);
+  };
+
+  const handlePrimeraPagina = () => {
+    setPaginaActual(1);
+  };
+
   const cardsUbicaciones = ubicaciones.map((ubicacion) => (
     <Card sx={{ width: 280, m: 3 }} key={ubicacion.id}>
       <CardContent>
@@ -68,6 +76,8 @@ const Ubicacion = () => {
       <Paginado
         proximaPagina={handleProximaPagina}
         paginaAnterior={handlePaginaAnterior}
+        ultimaPagina={handleUltimaPagina}
+        primeraPagina={handlePrimeraPagina}
         paginaActual={paginaActual}
         cantidadPaginas={cantidadPaginas}
       />

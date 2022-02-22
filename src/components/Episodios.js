@@ -26,8 +26,16 @@ const Episodios = () => {
   };
 
   const handlePaginaAnterior = () => {
-    setPaginaActual(paginaActual - 1);
+    setPaginaActual(paginaActual - 1)
   };
+
+  const handleUltimaPagina = () => {
+    setPaginaActual(cantidadPaginas)
+  };
+
+  const handlePrimeraPagina = () =>{
+    setPaginaActual(1)
+  }
 
   const cardsEpisodios = episodios.map((episodio) => (
     <Card
@@ -69,6 +77,8 @@ const Episodios = () => {
       <Paginado
         proximaPagina={handleProximaPagina}
         paginaAnterior={handlePaginaAnterior}
+        ultimaPagina = {handleUltimaPagina}
+        primeraPagina = {handlePrimeraPagina}
         paginaActual={paginaActual}
         cantidadPaginas={cantidadPaginas}
       />
