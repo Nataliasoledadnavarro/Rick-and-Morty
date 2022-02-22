@@ -5,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Paginado from "./Paginado";
+import Box from "@mui/material/Box";
 
 const Episodios = () => {
   const [episodios, setEpisodios] = useState([]);
@@ -54,6 +55,7 @@ const Episodios = () => {
   ));
 
   return (
+    <Box>
     <Container
       sx={{
         display: "flex",
@@ -63,13 +65,15 @@ const Episodios = () => {
       }}
     >
       {cardsEpisodios}
+      </Container>
       <Paginado
         proximaPagina={handleProximaPagina}
         paginaAnterior={handlePaginaAnterior}
         paginaActual={paginaActual}
         cantidadPaginas={cantidadPaginas}
       />
-    </Container>
+      </Box>
+   
   );
 };
 

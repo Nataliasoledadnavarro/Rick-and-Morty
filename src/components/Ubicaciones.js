@@ -5,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Paginado from "./Paginado";
+import Box from "@mui/material/Box";
 
 const Ubicacion = () => {
   const [ubicaciones, setUbicaciones] = useState([]);
@@ -28,7 +29,7 @@ const Ubicacion = () => {
     setPaginaActual(paginaActual - 1);
   };
 
-  const cards = ubicaciones.map((ubicacion) => (
+  const cardsUbicaciones = ubicaciones.map((ubicacion) => (
     <Card sx={{ width: 280, m: 3 }} key={ubicacion.id}>
       <CardContent>
         <Typography component="h5" variant="h5">
@@ -53,22 +54,24 @@ const Ubicacion = () => {
   ));
 
   return (
-    <Container
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        flexWrap: "wrap",
-        mt: 3,
-      }}
-    >
-      {cards}
+    <Box>
+      <Container
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          mt: 3,
+        }}
+      >
+        {cardsUbicaciones}
+      </Container>
       <Paginado
         proximaPagina={handleProximaPagina}
         paginaAnterior={handlePaginaAnterior}
         paginaActual={paginaActual}
         cantidadPaginas={cantidadPaginas}
       />
-    </Container>
+    </Box>
   );
 };
 
