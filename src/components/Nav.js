@@ -74,7 +74,7 @@ const ResponsiveAppBar = () => {
                     key={`${link}-responsive`}
                     onClick={handleCloseNavMenu}
                   >
-                    <Typography textAlign="center">{link}</Typography>
+                    <Typography textAlign="center" sx={{ textTransform: 'capitalize'}}>{link}</Typography>
                   </MenuItem>
                 </Link>
               ))}
