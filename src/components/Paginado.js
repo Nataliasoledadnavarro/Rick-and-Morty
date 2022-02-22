@@ -8,7 +8,6 @@ const Paginado = ({proximaPagina, paginaAnterior, paginaActual, cantidadPaginas}
           variant="contained"
           color="secondary"
           onClick={paginaAnterior}
-          {paginaActual === 1 && "disabled"}
         >
           Página anterior
         </Button>
@@ -16,7 +15,6 @@ const Paginado = ({proximaPagina, paginaAnterior, paginaActual, cantidadPaginas}
           variant="contained"
           color="secondary"
           onClick={proximaPagina}
-          {paginaActual === cantidadPaginas && "disabled"}w
         >
           Próxima página
         </Button>
