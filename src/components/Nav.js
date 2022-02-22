@@ -29,10 +29,11 @@ const ResponsiveAppBar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box>
-            <img width="150px" src={logo} alt="Rick and Morty"></img>
-          </Box>
-
+          <Link to="/">
+            <Box>
+              <img width="150px" src={logo} alt="Rick and Morty"></img>
+            </Box>
+          </Link>
           <Box
             sx={{
               flexGrow: 1,
@@ -74,7 +75,12 @@ const ResponsiveAppBar = () => {
                     key={`${link}-responsive`}
                     onClick={handleCloseNavMenu}
                   >
-                    <Typography textAlign="center" sx={{ textTransform: 'capitalize'}}>{link}</Typography>
+                    <Typography
+                      textAlign="center"
+                      sx={{ textTransform: "capitalize" }}
+                    >
+                      {link}
+                    </Typography>
                   </MenuItem>
                 </Link>
               ))}
