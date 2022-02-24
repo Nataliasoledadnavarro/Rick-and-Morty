@@ -4,6 +4,8 @@
 
 ### Se trata de un trabajo integrador donde puse en práctica lo aprendido hasta el momento con REACT y MUI
 
+## Ir al [buscador!](https://buscador-rick-and-morty.netlify.app/)
+
 ## Podrás:
 <ul>
     <li> Ver todos los personajes.</li>
@@ -23,11 +25,12 @@
     <li>Enrutamiento</li>
     <li>useState</li>
     <li>useEffect</li>
+    <li>Modal de personaje no encontrado</li>
+    <li>Error 404. Ruta no encontrada</li>
     <li>MATERIAL-UI</li>
 </ul>
 
 ## Info
-
 Este proyecto fue inicializado con [Create React App](https://github.com/facebook/create-react-app).
 
 ## Para correr el proyecto:
