@@ -22,6 +22,7 @@
     <li>Props</li>
     <li>Elevación de estado</li>
     <li>Renderizado condicional</li>
+    <li>Paginado</li>
     <li>Enrutamiento</li>
     <li>useState</li>
     <li>useEffect</li>
