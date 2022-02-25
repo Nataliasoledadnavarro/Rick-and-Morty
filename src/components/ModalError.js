@@ -2,11 +2,8 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { useState} from "react";
 
 const ModalError = ({abrirModal, cerrarModal}) =>{
-    console.log(cerrarModal)
-    console.log(abrirModal)
     const style = {
         position: 'absolute',
         top: '50%',
@@ -23,14 +20,13 @@ const ModalError = ({abrirModal, cerrarModal}) =>{
       <Modal
         open={abrirModal}
         onClose={cerrarModal}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        aria-labelledby="modal-personaje-no-encontrado"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <Typography variant="h6" component="p">
             Personaje no encontrado.
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography  sx={{ mt: 2 }}>
             Intentalo de nuevo!
           </Typography>
         </Box>
