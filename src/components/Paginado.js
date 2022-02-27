@@ -20,7 +20,7 @@ const Paginado = ({
         color="secondary"
         aria-label="Primera página"
         onClick={primeraPagina}
-        disabled={paginaActual === 1 && true}
+        disabled={paginaActual === 1}
       >
         <KeyboardDoubleArrowLeftIcon />
       </IconButton>
@@ -29,7 +29,7 @@ const Paginado = ({
         color="secondary"
         aria-label="Página anterior"
         onClick={paginaAnterior}
-        disabled={paginaActual === 1 && true}
+        disabled={paginaActual === 1}
       >
         <ChevronLeftIcon />
       </IconButton>
@@ -38,7 +38,7 @@ const Paginado = ({
         color="secondary"
         aria-label="Próxima página"
         onClick={proximaPagina}
-        disabled={paginaActual === cantidadPaginas && true}
+        disabled={paginaActual === cantidadPaginas}
       >
         <NavigateNextIcon />
       </IconButton>
@@ -47,7 +47,7 @@ const Paginado = ({
         color="secondary"
         aria-label="Última página"
         onClick={ultimaPagina}
-        disabled={paginaActual === cantidadPaginas && true}
+        disabled={paginaActual === cantidadPaginas}
       >
         <KeyboardDoubleArrowRightIcon />
       </IconButton>
